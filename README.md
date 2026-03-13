@@ -26,9 +26,9 @@ actually doing and where the problems were. The first thing I noticed was the gl
 example, used names like tc, ac, tv, vv, av, ts, ast, tp, op, cp, dp —all defined one after
 another in a block at the top of the function. You had to keep looking back to remember what
 each one stood for. The biggest issue though was that functions were doing too many things at once. The
-cast_vote() function is a good example which handled displaying the poll, collecting theuser's choices for each position, validating input, building the vote records, updating thevoter's history, updating the poll's vote count, writing to the audit log, and saving to the JSONfile, all in one place. That made it very hard to change any one part of it without riskingbreaking something else. The same problem appeared in view_detailed_statistics() which mixed calculations withprint
+cast_vote() function is a good example which handled displaying the poll, collecting theuser's choices for each position, validating input, building all the  vote records, updating thevoter's history, updating the poll's vote count, writing to the audit log, and saving to the JSONfile, all in one place. That made it very hard to change any one part of it without riskingbreaking something else. The same problem appeared in view_detailed_statistics() which mixed calculations withprint
 statements throughout, and in login() which handled admin login, voter login, and voter
-registration all branching off the same function. 
+registration all branching off the same branch.
 
 ## Project Structure
 
