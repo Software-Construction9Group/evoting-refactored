@@ -64,7 +64,7 @@ and admin_dashboard() accessed directly.
 
 This was the hardest part because the original mixed everything together so thoroughly. Wetried to keep three layers completely separate from each other:
 
-| Layer | Where | Rule we Followed |
+| Layer | Where | Rules we Followed |
 |------|------|----------------|
 | Presentation | `views/`, `ui/` | Only reads input and prints output. No business decisions here. |
 | Logic | `services/` | Does the actual work. Never prints anything or reads from the keyboard. |
